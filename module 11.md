@@ -12,10 +12,38 @@ Algorithm:
 5.	Call the max_of_four function with the input integers and store the result in the greater variable
  
 Program:
-//type your code here
+```
+#include <stdio.h>
+
+int greatest(int a, int b, int c)
+{
+    if(a >= b && a >= c)
+        return a;
+    else if(b >= a && b >= c)
+        return b;
+    else
+        return c;
+}
+
+int main()
+{
+    int a, b, c, result;
+
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    result = greatest(a, b, c);
+
+    printf("Greatest number = %d", result);
+
+    return 0;
+}
+```
 
 Output:
-//paste your output here
+
+<img width="416" height="53" alt="image" src="https://github.com/user-attachments/assets/184a6dfc-71bf-48b0-af55-5ab8021ba2e8" />
+
 
 Result:
 Thus, the program  that create a function to find the greatest number is verified successfully.
@@ -36,10 +64,33 @@ Algorithm:
 7.	Call the calculate_the_max function with input values.
  
 Program:
-//type your code here
+```
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    int and_result, or_result, xor_result;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    and_result = a & b;
+    or_result = a | b;
+    xor_result = a ^ b;
+
+    printf("AND = %d\n", and_result);
+    printf("OR = %d\n", or_result);
+    printf("XOR = %d\n", xor_result);
+
+    return 0;
+}
+```
 
 Output:
-//paste your output here
+
+<img width="373" height="123" alt="image" src="https://github.com/user-attachments/assets/8406ebc2-464b-4a2d-a818-cc4ee81370ad" />
+
 
 Result:
 Thus, the program to print the maximum values for the AND, OR and XOR comparisons
@@ -59,11 +110,32 @@ Algorithm:
 5.	Use a for loop to iterate over the queries.
  
 Program:
-//type your code here
+```
+#include <stdio.h>
 
+int main()
+{
+    int a, b;
+    int and, or, xor;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    and = a & b;
+    or = a | b;
+    xor = a ^ b;
+
+    printf("AND = %d\n", and);
+    printf("OR = %d\n", or);
+    printf("XOR = %d\n", xor);
+
+    return 0;
+}
+```
 Output:
-//paste your output here
 
+
+<img width="461" height="120" alt="image" src="https://github.com/user-attachments/assets/73ebb6d9-f5e3-4716-b83b-453afe941061" />
 
 Result:
 Thus, the program to write the logic for the requests is verified successfully.
@@ -86,12 +158,32 @@ Algorithm:
 
 
 Program:
-//type your code here
+```
+#include <stdio.h>
 
+int main()
+{
+    int a[5], i, sum = 0;
+
+    printf("Enter 5 integers: ");
+
+    for(i = 0; i < 5; i++)
+    {
+        scanf("%d", &a[i]);
+        sum = sum + a[i];
+    }
+
+    printf("Sum of integers = %d", sum);
+
+    return 0;
+}
+```
 Output:
-//paste your output here
 
- 
+
+
+ <img width="380" height="52" alt="image" src="https://github.com/user-attachments/assets/914601b5-4745-40f5-b02a-91a07c8013ba" />
+
 
 
 Result:
@@ -120,10 +212,33 @@ o	If a character is not a space, it may belong to a word. If it's the first non-
 
 
 Program:
-//type your code here
+```
 
+#include <stdio.h>
+
+int main()
+{
+    char str[100];
+    int i, words = 1;
+
+    printf("Enter a sentence: ");
+    gets(str);
+
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(str[i] == ' ')
+            words++;
+    }
+
+    printf("Number of words = %d", words);
+
+    return 0;
+}
+```
 Output:
-//paste your output here
+
+![Uploading image.png…]()
+
 
 
 
