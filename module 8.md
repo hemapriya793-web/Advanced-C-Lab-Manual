@@ -15,16 +15,42 @@ Algorithm:
 4.	Exit the program.
  
 Program:
+```
+#include <stdio.h>
 
-//type your code here
+int main()
+{
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    switch(n)
+    {
+        case 1: printf("one"); break;
+        case 2: printf("two"); break;
+        case 3: printf("three"); break;
+        case 4: printf("four"); break;
+        case 5: printf("five"); break;
+        case 6: printf("six"); break;
+        case 7: printf("seven"); break;
+        case 8: printf("eight"); break;
+        case 9: printf("nine"); break;
+        default: printf("invalid number");
+    }
+
+    return 0;
+}
+```
 
 
 
 
 Output:
 
+<img width="277" height="63" alt="image" src="https://github.com/user-attachments/assets/947928b8-171e-494c-a146-c87f56e3bac2" />
 
-//paste your output here
+
 
 
 
@@ -47,15 +73,45 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+#include <stdio.h>
+
+int main()
+{
+    int n, i, digit;
+    int freq[4] = {0, 0, 0, 0};
+
+    for(i = 0; i < 10; i++)
+    {
+        scanf("%d", &n);
+
+        while(n > 0)
+        {
+            digit = n % 10;
+
+            if(digit >= 0 && digit <= 3)
+                freq[digit]++;
+
+            n = n / 10;
+        }
+    }
+
+    for(i = 0; i < 4; i++)
+    {
+        printf("%d ", freq[i]);
+    }
+
+    return 0;
+}
+```
 
 
 
 
 Output:
 
+<img width="452" height="118" alt="image" src="https://github.com/user-attachments/assets/088aead5-ef9f-448b-af09-6cf7f12f069e" />
 
-//paste your output here
 
 
 
@@ -84,15 +140,56 @@ Free the memory allocated for each string in s Free the memory allocated for s
  
 Program:
 
-//type your code here
+```
+#include <stdio.h>
+#include <string.h>
+
+void swap(char *a, char *b)
+{
+    char temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void permute(char str[], int left, int right)
+{
+    int i;
+
+    if(left == right)
+    {
+        printf("%s\n", str);
+        return;
+    }
+
+    for(i = left; i <= right; i++)
+    {
+        swap(&str[left], &str[i]);
+        permute(str, left + 1, right);
+        swap(&str[left], &str[i]);
+    }
+}
+
+int main()
+{
+    char str[20];
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    permute(str, 0, strlen(str) - 1);
+
+    return 0;
+}
+
+```
 
 
 
 
 Output:
 
+<img width="207" height="125" alt="image" src="https://github.com/user-attachments/assets/3cc5e958-3f76-40a0-b50b-737adab4715f" />
 
-//paste your output here
 
 
 
@@ -117,7 +214,42 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+#include <stdio.h>
+
+int main()
+{
+    int n, i, j, min, len;
+
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    len = n * 2 - 1;
+
+    for(i = 0; i < len; i++)
+    {
+        for(j = 0; j < len; j++)
+        {
+            min = i;
+
+            if(j < min)
+                min = j;
+
+            if(len - 1 - i < min)
+                min = len - 1 - i;
+
+            if(len - 1 - j < min)
+                min = len - 1 - j;
+
+            printf("%d ", n - min);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+```
 
 
 
@@ -125,8 +257,9 @@ Program:
 Output:
 
 
-//paste your output here
 
+
+<img width="335" height="198" alt="image" src="https://github.com/user-attachments/assets/db301d2e-26a3-441f-a4ae-6d78168e7e7e" />
 
 
 
@@ -155,16 +288,38 @@ o	Call the square() function and display the result.
 5.	End.
 
 Program:
+```
 
-//type your code here
+#include <stdio.h>
 
+int square()
+{
+    int n;
 
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    return n * n;
+}
+
+int main()
+{
+    int result;
+
+    result = square();
+
+    printf("Square = %d", result);
+
+    return 0;
+}
+```
 
 
 Output:
 
 
-//paste your output here
+
+<img width="277" height="52" alt="image" src="https://github.com/user-attachments/assets/a9dea557-927c-48b8-b31e-cf08a07a38cf" />
 
 
 
