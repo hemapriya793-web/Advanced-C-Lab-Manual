@@ -15,13 +15,31 @@ Else
 6.	Return 0
  
 Program:
-
-//type your code here
-
-
+```
+#include <stdio.h>
+struct eligible
+{
+    int age;
+    char n[50];
+};
+int main()
+{
+    struct eligible e;
+    scanf("%d", &e.age);
+    scanf("%s", e.n);
+    if (e.age <= 6)
+        printf("Vaccine Eligibility: No");
+    else
+        printf("Vaccine Eligibility: Yes");
+    printf("\n%d", e.age);
+    printf("\n%s", e.n);
+    return 0;
+}
+```
 Output:
 
-//paste your output here
+<img width="282" height="176" alt="image" src="https://github.com/user-attachments/assets/d8f2e3cf-fe25-496b-89ce-da73b873e2ff" />
+
 
 
 Result:
@@ -44,7 +62,29 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+#include <stdio.h>
+
+struct numbers
+{
+    int a;
+    int b;
+};
+int add(struct numbers n)
+{
+    return n.a + n.b;
+}
+int main()
+{
+    struct numbers n;
+    printf("value of a: ");
+    scanf("%d", &n.a);
+    printf("value of b: ");
+    scanf("%d", &n.b);
+    printf("Sum = %d", add(n));
+    return 0;
+}
+```
 
 
 
@@ -52,7 +92,7 @@ Program:
 Output:
 
 
-//paste your output here
+<img width="730" height="311" alt="image" src="https://github.com/user-attachments/assets/73977330-1533-4621-8957-2b51e5ec2ac5" />
 
 
 
@@ -86,7 +126,8 @@ Use scanf to input the file name into the name array.
  
 Program:
 
-//type your code here
+
+<img width="436" height="386" alt="image" src="https://github.com/user-attachments/assets/db8e95f5-a046-48d1-a471-73891843e0de" />
 
 
 
@@ -94,7 +135,8 @@ Program:
 Output:
 
 
-//paste your output here
+<img width="307" height="167" alt="image" src="https://github.com/user-attachments/assets/1e6fb810-c3e4-46e5-a0db-e0a32f03c40c" />
+
 
 
 
@@ -133,15 +175,17 @@ Use scanf to input the file name into the name array and the number of strings i
  
 Program:
 
-//type your code here
+<img width="455" height="433" alt="image" src="https://github.com/user-attachments/assets/b416140a-ca3a-4943-a1d4-62b6143d3c88" />
+
 
 
 
 
 Output:
+<img width="365" height="58" alt="image" src="https://github.com/user-attachments/assets/9ce8945b-5490-4a98-bd78-1ea6d6f8516f" />
 
 
-//paste your output here
+
 
 
 
@@ -187,16 +231,17 @@ Algorithm:
 
 Program:
 
-//type your code here
 
+
+<img width="443" height="508" alt="image" src="https://github.com/user-attachments/assets/5056fd7d-6a76-444a-b10c-99d24af41e73" />
 
 
 
 Output:
 
 
-//paste your output here
 
+<img width="268" height="271" alt="image" src="https://github.com/user-attachments/assets/9ee4579f-660c-429b-b0b2-33ed665e1d37" />
 
 
 
